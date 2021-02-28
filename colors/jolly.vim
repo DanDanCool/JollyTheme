@@ -39,9 +39,9 @@ let s:JollyColors.Error			= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
 let s:JollyColors.Todo			= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
 
 func s:HighlightFn(group)
-	let l:colors = get(s:JollyColors, group)
+	let l:colors = get(s:JollyColors, a:group)
 
-	let l:highlightCmd = 'hi ' . group . ' '
+	let l:highlightCmd = 'hi ' . a:group . ' '
 	let l:highlightCmd .= 'guifg=' . get(l:colors, "guifg") . ' '
 	let l:highlightCmd .= 'ctermfg=' . get(l:colors, "fg") . ' '
 
