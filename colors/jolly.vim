@@ -15,7 +15,7 @@ let g:colors_name="JollyTheme"
 
 let s:JollyColors = {}
 
-let s:JollyColors.Normal	= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
+let s:JollyColors.Normal	= {"fg": "white", "bg": "black", "guifg": "#ffffff", "guibg": "#000000"}
 let s:JollyColors.Folded	= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
 let s:JollyColors.Visual	= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
 let s:JollyColors.Search	= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
@@ -39,5 +39,29 @@ let s:JollyColors.Error			= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
 let s:JollyColors.Todo			= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
 
 func s:HighlightFn(group)
-	let l:highlightCmd=""
+	let l:colors = get(s:JollyColors, group)
+
+	let l:highlightCmd = 'hi ' . group . ' '
+	let l:highlightCmd .= 'guifg=' . get(l:colors, "guifg") . ' '
+	let l:highlightCmd .= 'ctermfg=' . get(l:colors, "fg") . ' '
+
+	if has_key(l:colors, "bg")
+		let l:highlightCmd .= 'guibg=' . get(l:colors, "guibg") . ' '
+		let l:highlightCmd .= 'ctermbg=' . get(l:colors "bg") . ' '
+	endif
+
+	if has_key(l:colors, "cterm")
+		let l:highlightCmd .= 'gui=' . get(l:colors, "gui") . ' '
+		let l:highlightCmd .= 'cterm=' . get(l:colors, "cterm") . ' '
+	endif
+
+	if has_key(l:colors, "guisp")
+		let l:highlightCmd .= 'guisp=' . get(l:colors, "guisp") . ' '
+	endif
+
+	execute l:highlightCmd
+	unlet l:highlightCmd
+	unlet l:colors
 endfunc
+
+call s:HighlightFn("Normal")
