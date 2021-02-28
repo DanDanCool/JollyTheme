@@ -47,7 +47,7 @@ func s:HighlightFn(group)
 
 	if has_key(l:colors, "bg")
 		let l:highlightCmd .= 'guibg=' . get(l:colors, "guibg") . ' '
-		let l:highlightCmd .= 'ctermbg=' . get(l:colors "bg") . ' '
+		let l:highlightCmd .= 'ctermbg=' . get(l:colors, "bg") . ' '
 	endif
 
 	if has_key(l:colors, "cterm")
