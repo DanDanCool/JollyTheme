@@ -15,7 +15,7 @@ let g:colors_name = "JollyTheme"
 
 let s:JollyColors = {}
 
-if exists("g:JollyDefaultBackground")
+if get(g:, "JollyTransparentBackground", 0) > 0
 	let s:JollyColors.Normal	= {"fg": "white", "guifg": "#dcdcdc"}
 else
 	let s:JollyColors.Normal	= {"fg": "white", "bg": "black", "guifg": "#dcdcdc", "guibg": "#1B141B"}
