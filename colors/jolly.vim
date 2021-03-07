@@ -65,11 +65,11 @@ endif
 if exists("g:NERDTreePath")
 	let s:JollyColors.NERDTreeHelp		= {"fg": "white", "guifg": "#9b9b9b"}
 	let s:JollyColors.NERDTreeUp		= {"fg": "white", "guifg": "#9b9b9b"}
-	let s:JollyColors.NERDTreeCWD		= {"fg": "white", "guifg": "#ff4056"}
+	let s:JollyColors.NERDTreeCWD		= {"fg": "white", "guifg": "#F92672"}
 	let s:JollyColors.NERDTreeDir		= {"fg": "white", "guifg": "#5d5dd8"}
-	let s:JollyColors.NERDTreeDirSlash	= {"fg": "white", "guifg": "#5d5dd8"}
-	let s:JollyColors.NERDTreeOpenable	= {"fg": "white", "guifg": "#ffffff"}
-	let s:JollyColors.NERDTreeClosable	= {"fg": "white", "guifg": "#ffffff"}
+	let s:JollyColors.NERDTreeDirSlash	= {"fg": "white", "guifg": "#1B141B"}
+	let s:JollyColors.NERDTreeOpenable	= {"fg": "white", "guifg": "#2b91af"}
+	let s:JollyColors.NERDTreeClosable	= {"fg": "white", "guifg": "#2b91af"}
 endif
 
 func s:HighlightFn(group)
