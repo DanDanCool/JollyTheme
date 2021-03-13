@@ -28,7 +28,7 @@ let s:JollyColors.Constant		= {"fg": "white", "guifg": "#ff4056"}
 let s:JollyColors.Identifier	= {"fg": "white", "guifg": "#b4e4fe"}
 let s:JollyColors.Function		= {"fg": "white", "guifg": "#5d5dd8"}
 
-let s:JollyColors.Statement		= {"fg": "white", "guifg": "#AE81FF"}
+let s:JollyColors.Statement		= {"fg": "white", "guifg": "#9039c6"}
 let s:JollyColors.Conditional	= {"fg": "white", "guifg": "#9039c6"}
 let s:JollyColors.Repeat		= {"fg": "white", "guifg": "#9039c6"}
 let s:JollyColors.Label			= {"fg": "white", "guifg": "#9039c6"}
@@ -59,6 +59,8 @@ let s:JollyColors.PmenuSel	= {"fg": "white", "bg": "black", "guifg": "#ffffff", 
 if exists("g:lsp_cxx_hl_loaded")
 	let s:JollyColors.LspCxxHlSymNamespace	= {"fg": "white", "guifg": "#fbffa0"}
 	let s:JollyColors.LspCxxHlSymField		= {"fg": "white", "guifg": "#b4e4fe"}
+	let s:JollyColors.LspCxxHlSymClass		= {"fg": "white", "guifg": "#F92672"}
+	let s:JollyColors.LspCxxHlSymStruct		= {"fg": "white", "guifg": "#F92672"}
 endif
 
 "NerdTree
@@ -135,6 +137,8 @@ call s:HighlightFn("PmenuSel")
 if exists("g:lsp_cxx_hl_loaded")
 	call s:HighlightFn("LspCxxHlSymNamespace")
 	call s:HighlightFn("LspCxxHlSymField")
+	call s:HighlightFn("LspCxxHlSymClass")
+	call s:HighlightFn("LspCxxHlSymStruct")
 endif
 
 if exists("g:NERDTreePath")
