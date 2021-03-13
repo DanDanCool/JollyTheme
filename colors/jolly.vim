@@ -38,8 +38,8 @@ let s:JollyColors.Exception		= {"fg": "white", "guifg": "#9039c6"}
 let s:JollyColors.PreProc		= {"fg": "white", "guifg": "#9039c6"}
 let s:JollyColors.Include		= {"fg": "white", "guifg": "#9b9b9b"}
 
-let s:JollyColors.Type			= {"fg": "white", "guifg": "#F92672"}
-let s:JollyColors.Structure		= {"fg": "white", "guifg": "#AE81FF"}
+let s:JollyColors.Type			= {"fg": "white", "guifg": "#9039c6"}
+let s:JollyColors.Structure		= {"fg": "white", "guifg": "#9039c6"}
 
 let s:JollyColors.Special		= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
 let s:JollyColors.Underlined	= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
