@@ -56,15 +56,13 @@ let s:JollyColors.Pmenu		= {"fg": "white", "bg": "92", "guifg": "#ffffff", "guib
 let s:JollyColors.PmenuSel	= {"fg": "white", "bg": "62", "guifg": "#ffffff", "guibg": "#594359"}
 
 "NerdTree
-if exists("g:NERDTreePath")
-	let s:JollyColors.NERDTreeHelp		= {"fg": "white", "guifg": "#9b9b9b"}
-	let s:JollyColors.NERDTreeUp		= {"fg": "white", "guifg": "#9b9b9b"}
-	let s:JollyColors.NERDTreeCWD		= {"fg": "white", "guifg": "#F92672"}
-	let s:JollyColors.NERDTreeDir		= {"fg": "white", "guifg": "#5d5dd8"}
-	let s:JollyColors.NERDTreeDirSlash	= {"fg": "white", "guifg": "#5d5dd8"}
-	let s:JollyColors.NERDTreeOpenable	= {"fg": "white", "guifg": "#2b91af"}
-	let s:JollyColors.NERDTreeClosable	= {"fg": "white", "guifg": "#2b91af"}
-endif
+let s:JollyColors.NERDTreeHelp		= {"fg": "white", "guifg": "#9b9b9b"}
+let s:JollyColors.NERDTreeUp		= {"fg": "white", "guifg": "#9b9b9b"}
+let s:JollyColors.NERDTreeCWD		= {"fg": "white", "guifg": "#F92672"}
+let s:JollyColors.NERDTreeDir		= {"fg": "white", "guifg": "#5d5dd8"}
+let s:JollyColors.NERDTreeDirSlash	= {"fg": "white", "guifg": "#5d5dd8"}
+let s:JollyColors.NERDTreeOpenable	= {"fg": "white", "guifg": "#2b91af"}
+let s:JollyColors.NERDTreeClosable	= {"fg": "white", "guifg": "#2b91af"}
 
 func s:HighlightFn(group)
 	let l:colors = get(s:JollyColors, a:group)
@@ -126,14 +124,12 @@ call s:HighlightFn("VertSplit")
 call s:HighlightFn("Pmenu")
 call s:HighlightFn("PmenuSel")
 
-if exists("g:NERDTreePath")
-	call s:HighlightFn("NERDTreeHelp")
-	call s:HighlightFn("NERDTreeUp")
-	call s:HighlightFn("NERDTreeCWD")
-	call s:HighlightFn("NERDTreeDir")
-	call s:HighlightFn("NERDTreeDirSlash")
-	call s:HighlightFn("NERDTreeOpenable")
-	call s:HighlightFn("NERDTreeClosable")
-endif
+call s:HighlightFn("NERDTreeHelp")
+call s:HighlightFn("NERDTreeUp")
+call s:HighlightFn("NERDTreeCWD")
+call s:HighlightFn("NERDTreeDir")
+call s:HighlightFn("NERDTreeDirSlash")
+call s:HighlightFn("NERDTreeOpenable")
+call s:HighlightFn("NERDTreeClosable")
 
 unlet s:JollyColors
