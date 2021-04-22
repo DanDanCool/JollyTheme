@@ -16,44 +16,44 @@ let g:colors_name = "JollyTheme"
 let s:JollyColors = {}
 
 if get(g:, "JollyTransparentBackground", 0) > 0
-	let s:JollyColors.Normal	= {"fg": "15", "guifg": "#dcdcdc"}
+	let s:JollyColors.Normal	= {"fg": "white", "guifg": "#dcdcdc"}
 else
 	let s:JollyColors.Normal	= {"fg": "white", "bg": "black", "guifg": "#dcdcdc", "guibg": "#1B141B"}
 endif
 
 "syntax"
-let s:JollyColors.Comment		= {"fg": "white", "guifg": "#4EB13E"}
-let s:JollyColors.Constant		= {"fg": "white", "guifg": "#ff4056"}
+let s:JollyColors.Comment		= {"fg":  "71", "guifg": "#4EB13E"}
+let s:JollyColors.Constant		= {"fg": "197", "guifg": "#ff4056"}
 
-let s:JollyColors.Identifier	= {"fg": "white", "guifg": "#b4e4fe"}
-let s:JollyColors.Function		= {"fg": "white", "guifg": "#5d5dd8"}
+let s:JollyColors.Identifier	= {"fg": "153", "guifg": "#b4e4fe"}
+let s:JollyColors.Function		= {"fg":  "62", "guifg": "#5d5dd8"}
 
-let s:JollyColors.Statement		= {"fg": "white", "guifg": "#9039c6"}
-let s:JollyColors.Conditional	= {"fg": "white", "guifg": "#9039c6"}
-let s:JollyColors.Repeat		= {"fg": "white", "guifg": "#9039c6"}
-let s:JollyColors.Label			= {"fg": "white", "guifg": "#9039c6"}
+let s:JollyColors.Statement		= {"fg": "98", "guifg": "#9039c6"}
+let s:JollyColors.Conditional	= {"fg": "98", "guifg": "#9039c6"}
+let s:JollyColors.Repeat		= {"fg": "98", "guifg": "#9039c6"}
+let s:JollyColors.Label			= {"fg": "98", "guifg": "#9039c6"}
 let s:JollyColors.Operator		= {"fg": "white", "guifg": "#DCDCDC"}
-let s:JollyColors.Exception		= {"fg": "white", "guifg": "#9039c6"}
+let s:JollyColors.Exception		= {"fg": "98", "guifg": "#9039c6"}
 
-let s:JollyColors.PreProc		= {"fg": "white", "guifg": "#9039c6"}
-let s:JollyColors.Include		= {"fg": "white", "guifg": "#9b9b9b"}
+let s:JollyColors.PreProc		= {"fg":  "92", "guifg": "#9039c6"}
+let s:JollyColors.Include		= {"fg": "245", "guifg": "#9b9b9b"}
 
-let s:JollyColors.Type			= {"fg": "white", "guifg": "#9039c6"}
-let s:JollyColors.Structure		= {"fg": "white", "guifg": "#9039c6"}
+let s:JollyColors.Type			= {"fg": "98", "guifg": "#9039c6"}
+let s:JollyColors.Structure		= {"fg": "98", "guifg": "#9039c6"}
 
 let s:JollyColors.Special		= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
 let s:JollyColors.Underlined	= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
 let s:JollyColors.Ignore		= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
 let s:JollyColors.Error			= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
-let s:JollyColors.Todo			= {"fg": "white", "bg": "green", "guifg": "#1B141B", "guibg": "#4EB13E"}
+let s:JollyColors.Todo			= {"fg": "white", "bg": "28", "guifg": "#1B141B", "guibg": "#4EB13E"}
 
-let s:JollyColors.Folded	= {"fg": "black", "bg": "white", "guifg": "#ffffff", "guibg": "#594359"}
-let s:JollyColors.Visual	= {"bg": "white", "guibg": "#594359"}
-let s:JollyColors.Search	= {"fg": "black", "bg": "white", "guifg": "#1B141B", "guibg": "#F92672"}
+let s:JollyColors.Folded	= {"fg": "white", "bg": "54", "guifg": "#ffffff", "guibg": "#594359"}
+let s:JollyColors.Visual	= {"bg": "242", "guibg": "#594359"}
+let s:JollyColors.Search	= {"fg": "black", "bg": "198", "guifg": "#1B141B", "guibg": "#F92672"}
 let s:JollyColors.VertSplit = {"fg": "white", "bg": "black", "guifg": "#1B141B", "guibg": "#FFFFFF"}
-let s:JollyColors.LineNr	= {"fg": "white", "guifg": "#2b91af"}
-let s:JollyColors.Pmenu		= {"fg": "white", "bg": "black", "guifg": "#ffffff", "guibg": "#231a23"}
-let s:JollyColors.PmenuSel	= {"fg": "white", "bg": "black", "guifg": "#ffffff", "guibg": "#594359"}
+let s:JollyColors.LineNr	= {"fg": "38", "guifg": "#2b91af"}
+let s:JollyColors.Pmenu		= {"fg": "white", "bg": "92", "guifg": "#ffffff", "guibg": "#231a23"}
+let s:JollyColors.PmenuSel	= {"fg": "white", "bg": "62", "guifg": "#ffffff", "guibg": "#594359"}
 
 "NerdTree
 if exists("g:NERDTreePath")
@@ -125,13 +125,6 @@ call s:HighlightFn("LineNr")
 call s:HighlightFn("VertSplit")
 call s:HighlightFn("Pmenu")
 call s:HighlightFn("PmenuSel")
-
-if exists("g:lsp_cxx_hl_loaded")
-	call s:HighlightFn("LspCxxHlSymNamespace")
-	call s:HighlightFn("LspCxxHlSymField")
-	call s:HighlightFn("LspCxxHlSymClass")
-	call s:HighlightFn("LspCxxHlSymStruct")
-endif
 
 if exists("g:NERDTreePath")
 	call s:HighlightFn("NERDTreeHelp")
