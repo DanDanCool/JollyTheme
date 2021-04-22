@@ -16,7 +16,7 @@ let g:colors_name = "JollyTheme"
 let s:JollyColors = {}
 
 if get(g:, "JollyTransparentBackground", 0) > 0
-	let s:JollyColors.Normal	= {"fg": "white", "guifg": "#dcdcdc"}
+	let s:JollyColors.Normal	= {"fg": "15", "guifg": "#dcdcdc"}
 else
 	let s:JollyColors.Normal	= {"fg": "white", "bg": "black", "guifg": "#dcdcdc", "guibg": "#1B141B"}
 endif
@@ -54,14 +54,6 @@ let s:JollyColors.VertSplit = {"fg": "white", "bg": "black", "guifg": "#1B141B",
 let s:JollyColors.LineNr	= {"fg": "white", "guifg": "#2b91af"}
 let s:JollyColors.Pmenu		= {"fg": "white", "bg": "black", "guifg": "#ffffff", "guibg": "#231a23"}
 let s:JollyColors.PmenuSel	= {"fg": "white", "bg": "black", "guifg": "#ffffff", "guibg": "#594359"}
-
-"lsp cxx highlight
-if exists("g:lsp_cxx_hl_loaded")
-	let s:JollyColors.LspCxxHlSymNamespace	= {"fg": "white", "guifg": "#fbffa0"}
-	let s:JollyColors.LspCxxHlSymField		= {"fg": "white", "guifg": "#b4e4fe"}
-	let s:JollyColors.LspCxxHlSymClass		= {"fg": "white", "guifg": "#F92672"}
-	let s:JollyColors.LspCxxHlSymStruct		= {"fg": "white", "guifg": "#F92672"}
-endif
 
 "NerdTree
 if exists("g:NERDTreePath")
