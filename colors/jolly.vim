@@ -17,8 +17,11 @@ let s:JollyColors = {}
 
 if get(g:, "JollyTransparentBackground", 0) > 0
 	let s:JollyColors.Normal	= {"fg": "white", "guifg": "#dcdcdc"}
+	let s:JollyColors.VertSplit = {"cterm": "NONE", "fg": "38", "bg": "NONE",
+				\	"gui": "NONE", "guifg": "#232526", "guibg": "NONE"}
 else
 	let s:JollyColors.Normal	= {"fg": "white", "bg": "black", "guifg": "#dcdcdc", "guibg": "#1B141B"}
+	let s:JollyColors.VertSplit = {"fg": "38", "bg": "38", "guifg": "#1B141B", "guibg": "#FFFFFF"}
 endif
 
 "syntax"
@@ -47,13 +50,18 @@ let s:JollyColors.Ignore		= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
 let s:JollyColors.Error			= {"fg": "", "bg": "", "guifg": "#", "guibg": "#"}
 let s:JollyColors.Todo			= {"fg": "white", "bg": "28", "guifg": "#1B141B", "guibg": "#4EB13E"}
 
-let s:JollyColors.Folded	= {"fg": "white", "bg": "54", "guifg": "#ffffff", "guibg": "#594359"}
-let s:JollyColors.Visual	= {"bg": "242", "guibg": "#594359"}
-let s:JollyColors.Search	= {"fg": "black", "bg": "198", "guifg": "#1B141B", "guibg": "#F92672"}
-let s:JollyColors.VertSplit = {"fg": "white", "bg": "black", "guifg": "#1B141B", "guibg": "#FFFFFF"}
-let s:JollyColors.LineNr	= {"fg": "38", "guifg": "#2b91af"}
-let s:JollyColors.Pmenu		= {"fg": "white", "bg": "92", "guifg": "#ffffff", "guibg": "#231a23"}
-let s:JollyColors.PmenuSel	= {"fg": "white", "bg": "62", "guifg": "#ffffff", "guibg": "#594359"}
+"Misc"
+let s:JollyColors.Folded		= {"fg": "white", "bg": "54", "guifg": "#ffffff", "guibg": "#594359"}
+let s:JollyColors.Visual		= {"bg": "242", "guibg": "#594359"}
+let s:JollyColors.Search		= {"fg": "black", "bg": "198", "guifg": "#1B141B", "guibg": "#F92672"}
+let s:JollyColors.LineNr		= {"fg":  "38", "guifg": "#2b91af"}
+let s:JollyColors.Pmenu			= {"fg": "white", "bg": "92", "guifg": "#ffffff", "guibg": "#231a23"}
+let s:JollyColors.PmenuSel		= {"fg": "white", "bg": "62", "guifg": "#ffffff", "guibg": "#594359"}
+
+"colors based off of lightline molokai theme"
+let s:JollyColors.StatusLine	= {"fg": "233", "guifg": "#232526"}
+let s:JollyColors.StatusLineNC	= {"fg": "233", "guifg": "#232526"}
+let s:JollyColors.EndOfBuffer	= {"fg":  "38", "guifg": "#232526"}
 
 "NerdTree
 let s:JollyColors.NERDTreeHelp		= {"fg": "white", "guifg": "#9b9b9b"}
@@ -123,6 +131,9 @@ call s:HighlightFn("LineNr")
 call s:HighlightFn("VertSplit")
 call s:HighlightFn("Pmenu")
 call s:HighlightFn("PmenuSel")
+call s:HighlightFn("StatusLine")
+call s:HighlightFn("StatusLineNC")
+call s:HighlightFn("EndOfBuffer")
 
 call s:HighlightFn("NERDTreeHelp")
 call s:HighlightFn("NERDTreeUp")
