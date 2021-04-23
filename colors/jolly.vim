@@ -54,7 +54,7 @@ let s:JollyColors.Todo			= {"fg": "white", "bg": "28", "guifg": "#1B141B", "guib
 let s:JollyColors.Folded		= {"fg": "white", "bg": "54", "guifg": "#ffffff", "guibg": "#594359"}
 let s:JollyColors.Visual		= {"bg": "242", "guibg": "#594359"}
 let s:JollyColors.Search		= {"fg": "black", "bg": "198", "guifg": "#1B141B", "guibg": "#F92672"}
-let s:JollyColors.LineNr		= {"fg":  "38", "guifg": "#2b91af"}
+let s:JollyColors.LineNr		= {"fg":  "38", "guifg": "#0089b7"}
 let s:JollyColors.Pmenu			= {"fg": "white", "bg": "92", "guifg": "#ffffff", "guibg": "#231a23"}
 let s:JollyColors.PmenuSel		= {"fg": "white", "bg": "62", "guifg": "#ffffff", "guibg": "#594359"}
 
