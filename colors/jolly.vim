@@ -74,7 +74,7 @@ let s:JollyColors.NERDTreeClosable	= {"fg": "white", "guifg": "#0089b7"}
 
 "treesitter"
 let s:JollyColors.TSNamespace	= {"fg": "white", "guifg": "#fbffa0"}
-let s:JollyColors.TSType		= {"fg": "white", "#F92672"}
+let s:JollyColors.TSType		= {"fg": "white", "guifg": "#F92672"}
 
 func s:HighlightFn(group)
 	let l:colors = get(s:JollyColors, a:group)
