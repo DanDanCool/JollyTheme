@@ -148,6 +148,6 @@ call s:HighlightFn("NERDTreeOpenable")
 call s:HighlightFn("NERDTreeClosable")
 
 call s:HighlightFn("TSNamespace")
-call s:HiglightFn("TSType")
+call s:HighlightFn("TSType")
 
 unlet s:JollyColors
