@@ -73,8 +73,8 @@ let s:JollyColors.NERDTreeOpenable	= {"fg": "white", "guifg": "#0089b7"}
 let s:JollyColors.NERDTreeClosable	= {"fg": "white", "guifg": "#0089b7"}
 
 "treesitter"
-let s:JollyColors.TSNamespace = {"fg": "white", "guifg": "#fbffa0"}
-let s:JollyColors.TSType = {"fg": "white", "#F92672"}
+let s:JollyColors.TSNamespace	= {"fg": "white", "guifg": "#fbffa0"}
+let s:JollyColors.TSType		= {"fg": "white", "#F92672"}
 
 func s:HighlightFn(group)
 	let l:colors = get(s:JollyColors, a:group)
@@ -146,5 +146,8 @@ call s:HighlightFn("NERDTreeDir")
 call s:HighlightFn("NERDTreeDirSlash")
 call s:HighlightFn("NERDTreeOpenable")
 call s:HighlightFn("NERDTreeClosable")
+
+call s:HighlightFn("TSNamespace")
+call s:HiglightFn("TSType")
 
 unlet s:JollyColors
