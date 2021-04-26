@@ -26,7 +26,13 @@ endif
 
 "syntax"
 let s:JollyColors.Comment		= {"fg":  "71", "guifg": "#4EB13E"}
-let s:JollyColors.Constant		= {"fg": "197", "guifg": "#ff4056"}
+
+let s:JollyColors.Constant		= {"fg": "white", "guifg": "#9039c6"}
+let s:JollyColors.String		= {"fg": "197", "guifg": "#ff4056"}
+let s:JollyColors.Character		= {"fg": "197", "guifg": "#ff4056"}
+let s:JollyColors.Number		= {"fg": "197", "guifg": "#ff4056"}
+let s:JollyColors.Boolean		= {"fg": "white", "guifg": "#9039c6"}
+let s:JollyColors.Float			= {"fg": "197", "guifg": "#ff4056"}
 
 let s:JollyColors.Identifier	= {"fg": "153", "guifg": "#b4e4fe"}
 let s:JollyColors.Function		= {"fg":  "62", "guifg": "#5d5dd8"}
@@ -75,6 +81,7 @@ let s:JollyColors.NERDTreeClosable	= {"fg": "white", "guifg": "#0089b7"}
 "treesitter"
 let s:JollyColors.TSNamespace	= {"fg": "white", "guifg": "#fbffa0"}
 let s:JollyColors.TSType		= {"fg": "white", "guifg": "#F92672"}
+let s:JollyColors.TSText		= {"fg": "white", "guifg": "#dcdcdc"}
 
 func s:HighlightFn(group)
 	let l:colors = get(s:JollyColors, a:group)
@@ -109,12 +116,11 @@ call s:HighlightFn("Normal")
 call s:HighlightFn("Comment")
 
 call s:HighlightFn("Constant")
-
-call s:HighlightFn("PreProc")
-call s:HighlightFn("Include")
-
-call s:HighlightFn("Type")
-call s:HighlightFn("Structure")
+call s:HighlightFn("String")
+call s:HighlightFn("Character")
+call s:HighlightFn("Number")
+call s:HighlightFn("Boolean")
+call s:HighlightFn("Float")
 
 call s:HighlightFn("Identifier")
 call s:HighlightFn("Function")
@@ -125,6 +131,12 @@ call s:HighlightFn("Repeat")
 call s:HighlightFn("Label")
 call s:HighlightFn("Operator")
 call s:HighlightFn("Exception")
+
+call s:HighlightFn("PreProc")
+call s:HighlightFn("Include")
+
+call s:HighlightFn("Type")
+call s:HighlightFn("Structure")
 
 call s:HighlightFn("Todo")
 
